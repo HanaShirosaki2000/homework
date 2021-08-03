@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    double x1,x2,x3,y1,y2,y3,SinC,CosC;
+    scanf("%lf %lf %lf %lf %lf %lf", &x1,&y1,&x2,&y2,&x3,&y3);
+    double a,b,c,C,S;
+    a=pow(pow(x1-x2,2)+pow(y1-y2,2),1.0/2);
+    b=pow(pow(x1-x3,2)+pow(y1-y3,2),1.0/2);
+    c=pow(pow(x3-x2,2)+pow(y3-y2,2),1.0/2);
+    C=a+b+c;
+    CosC=(pow(a,2)+pow(b,2)-pow(c,2))/a/b/2.0;
+    SinC=pow(1-pow(CosC,2),1.0/2);
+    S=0.5*a*b*SinC;
+    if(a+b<=c||a+c<=b||b+c<=a){printf("Impossible");}
+    else{printf("L = %.2lf, A = %.2lf", C,S);}
+    return 0;
+}
+//输入在一行中顺序给出六个[−100,100]范围内的数字，即三个点的坐标x1y1x2y2x3y3
