@@ -1,0 +1,22 @@
+# include <stdio.h>
+
+int main()
+{
+    int a[10];
+    int intput;
+    for(int i=0;i<10;i++)
+    {
+    a[i]=0;
+    }
+    for(int i=1;i<=5;i++)
+    {
+    scanf("%d",&intput);
+    a[intput]=1;
+    }
+    for(int i=0;i<10;i++)
+    {
+        if(a[i]==0)
+        printf("%d",i);
+    }
+    return 0;
+}
