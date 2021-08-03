@@ -1,0 +1,22 @@
+#include <stdio.h>
+double fact(int n);
+int main()
+{
+    int a,b;
+    double result;
+    scanf("%d %d", &a, &b);
+    result=fact(b)/fact(a)/fact(b-a);
+    printf("result = %.0lf\n", result);
+return 0;
+}
+double fact(int n)
+{
+    double sum=1.0;
+    for(int i=1;i<=n;i++) sum*=i;
+    return sum;
+}
+/*
+example
+2 7
+result = 21
+*/
