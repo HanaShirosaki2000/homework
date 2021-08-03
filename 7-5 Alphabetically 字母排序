@@ -1,0 +1,24 @@
+# include <stdio.h>
+# include <string.h>
+
+int main()
+{
+    char a[101];
+    gets(a);
+    int len,t;
+    len=strlen(a);
+    for(int i=0; i<=len-2; i++)
+    {
+    for(int j=i+1; j<=len-1; j++)
+    {
+    if(a[i]>a[j])
+    {
+    t=a[i];
+    a[i]=a[j];
+    a[j]=t;
+    }
+    }
+    }
+    puts(a);
+    return 0;
+}
